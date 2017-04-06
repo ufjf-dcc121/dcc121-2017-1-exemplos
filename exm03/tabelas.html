@@ -43,8 +43,7 @@
       </tbody>
       <tfoot>
         <tr>
-          <th></th>
-          <th>Médias</th>
+          <th colspan="2">Médias</th>
           <td>70</td>
           <td>80</td>
           <td>90</td>
@@ -52,6 +51,101 @@
       </tfoot>
     </table>
 
+    <h1>Mesclagem de células</h1>
+    <table border="1">
+      <tbody>
+        <tr>
+          <td></td>
+          <td>A</td>
+          <td>B</td>
+          <td>C</td>
+          <td>D</td>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td colspan="2">AB</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td></td>
+          <td colspan="3">BCD</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td colspan="2">AB</td>
+          <td colspan="2">CD</td>
+        </tr>
+        <tr>
+          <td colspan="5">4ABCD</td>
+        </tr>
+      </tbody>
+    </table>
+    <p>Linhas </p>
+    <table border="1">
+      <tbody>
+        <tr>
+          <td></td>
+          <td>A</td>
+          <td>B</td>
+          <td>C</td>
+          <td rowspan="5">D1234</td>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td rowspan="2">1 2</td>
+          <td></td>
+          <td rowspan="2">1 2</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td rowspan="3">234</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td></td>
+          <td rowspan="2">3 4</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p>Misto</p>
+    <table border="1">
+      <tbody>
+        <tr>
+          <td></td>
+          <td>A</td>
+          <td>B</td>
+          <td>C</td>
+          <td>D</td>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td colspan="2" rowspan="2">AB12</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td colspan="2" rowspan="3">CD234</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td></td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
 
   </body>
 </html>
