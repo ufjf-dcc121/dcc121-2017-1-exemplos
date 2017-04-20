@@ -1,0 +1,9 @@
+ol {
+  color: blue;
+}
+li {
+  font-size: 1.2em;
+  text-decoration: underline;
+  font-weight: bold;
+  text-transform: uppercase;
+}
