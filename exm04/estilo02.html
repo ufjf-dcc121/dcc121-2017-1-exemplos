@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Estilo 02</title>
+    <style>
+      h1 {
+        color: blue;
+      }
+      li {
+        color: red;
+      }
+      article > h1 {
+        color: green;
+      }
+      section > h1 {
+        color: orange;
+      }
+      section > section > h1{
+        color: black;
+      }
+      article, section {
+        padding: 10px;
+        border: 1px solid black;
+      }
+      article section li {
+        color: green;
+      }
+      article li {
+        color: purple;
+      }
+      .forte {
+        font-size: 120%;
+        color: gold;
+      }
+      .fraco{
+        font-size: 80%;
+      }
+      #identificadores{
+        display: none;
+      }
+      #pseudo{
+        display: none;
+      }
+      .excluido{
+        text-decoration: line-through;
+      }
+      .fraco.excluido{
+        color: grey;
+      }
+      .fraco .excluido{
+        color: pink;
+      }
+      body > article > section:nth-child(4) > ol > li:nth-child(2) > ul > li.fraco.excluido > strong{
+        background-color: red;
+      }
+      </style>
+  </head>
+  <body>
+
+    <h1>Estilo 02</h1>
+
+    <article>
+      <h1>Estilos</h1>
+      <p>A ordem que as folhas de estilo são aplicadas é, da menor para maior importância:</p>
+      <ol>
+        <li>
+          <ol>
+            <li class="fraco">Estilo do agente de usuário;</li>
+            <li class="medio">Estilo do autor;</li>
+            <li class="forte">Estilo do usuário;</li>
+          </ol>
+        </li>
+        <li>Estilo do autor por importância;</li>
+        <li>Estilo do usuário por importância;</li>
+      </ol>
+      <section>
+        <h1>Seletores</h1>
+        <p>Os seletores em CSS são operações de busca que retornam elementos HTML para serem estilizados. A ordem de importância que eles são resolvidos é:</p>
+        <ol>
+          <li class="excluido">Importância (melhor evitar);</li>
+          <li>Especificidade;
+            <ul>
+              <li class="forte">Cada id vale <strong>100 pontos;</strong></li>
+              <li class="medio">Cada classe vale <strong>10 pontos;</strong></li>
+              <li class="fraco excluido">Cada etiqueta vale <strong>1 ponto</strong>;</li>
+            </ul>
+          </li>
+          <li>Posição no documento/cascata.</li>
+        </ol>
+        <section>
+          <h1>Classes</h1>
+        </section>
+        <section id="identificadores" class="forte">
+          <h1>Identificadores</h1>
+        </section>
+        <section id="pseudo">
+          <h1>Pseudo-classes</h1>
+        </section>
+      </section>
+      <section>
+        <h1>Propriedades/Atributos CSS</h1>
+        <p>São os estados que deefinem a exibição do elemento na tela do navegador. Sempre vão vir no formato <code>propriedade: valor;</code></p>
+
+      </section>
+    </article>
+  </body>
+</html>
