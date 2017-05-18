@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Exemplo JS03</title>
+  </head>
+  <body>
+    <h1>Exemplo JS03</h1>
+    <script>
+      function Pessoa(nome, idade){
+        this.nome = nome;
+        this.idade = idade;
+      }
+      Pessoa.prototype.dizOi = function(){
+        console.log("Oi");
+      }
+      var p1 = new Pessoa("Fulano", 18);
+      console.log(p1);
+      var p2 = new Pessoa("Beltrano", 22);
+      console.log(p2);
+    </script>
+  </body>
+</html>
