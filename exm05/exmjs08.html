@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Exemplo JS 08</title>
+  </head>
+  <body>
+    <h1>Exemplo JS 08</h1>
+    <script>
+      var eUL = document.createElement("ul");
+      document.body.appendChild(eUL);
+      eUL.innerHTML = "<li>Primeiro</li>";
+      eUL.innerHTML = eUL.innerHTML + "<li>Segundo</li>";
+      eUL.innerHTML += "<li>Terceiro</li>";
+    </script>
+  </body>
+</html>

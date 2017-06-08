@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Exemplo JS 10</title>
+  </head>
+  <body>
+    <h1>Exemplo JS 10</h1>
+    <p>Os números entre <var>12</var> e <var>33</var> são:</p>
+    <ul></ul>
+    <script>
+    //Localizar entradas
+    var eP = document.body.children[1];
+    var eVar1 = eP.children[0];
+    var eVar2 = eP.children[1];
+    //Localizar saídas
+    var eUL = document.body.children[2];
+    //Realizar operações
+    var n1 = Number(eVar1.innerHTML);
+    var n2 = Number(eVar2.innerHTML);
+    for(var c = n1; c <= n2; c++){
+      //Imprimir resultado
+      var eLI = document.createElement("li");
+      eLI.innerHTML = c;
+      eUL.appendChild(eLI);
+    }
+
+    </script>
+  </body>
+</html>
