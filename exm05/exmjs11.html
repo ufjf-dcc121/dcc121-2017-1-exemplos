@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Exemplo JS 11</title>
+  </head>
+  <body>
+    <h1>Exemplo JS 11</h1>
+    <p>Os números entre <var contenteditable>1</var> e <var contenteditable>3</var> são:</p>
+    <button>Calcular</button>
+    <ul></ul>
+    <script>
+    //Localizar entradas
+    var eP = document.body.children[1];
+    var eButton = document.body.children[2];
+    var eVar1 = eP.children[0];
+    var eVar2 = eP.children[1];
+    //Localizar saídas
+    var eUL = document.body.children[3];
+    eButton.addEventListener("click", calculaEImprime);
+
+    function calculaEImprime(){
+      //Realizar operações
+      var n1 = Number(eVar1.innerHTML);
+      var n2 = Number(eVar2.innerHTML);
+      eUL.innerHTML = "";
+      for(var c = n1; c <= n2; c++){
+        //Imprimir resultado
+        var eLI = document.createElement("li");
+        eLI.innerHTML = c;
+        eUL.appendChild(eLI);
+      }
+    }
+
+    </script>
+  </body>
+</html>

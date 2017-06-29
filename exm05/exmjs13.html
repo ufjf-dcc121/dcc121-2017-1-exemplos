@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Exemplo JS 12</title>
+  </head>
+  <body>
+    <section>
+      <h1>Exemplo JS 13</h1>
+      <p><span>A soma</span> entre <var contenteditable>1</var> e <var contenteditable>3</var> é:
+        <output id="saida"></output></p>
+      <button>+</button>
+      <button>-</button>
+      <button>*</button>
+      <button>/</button>
+    </section>
+
+    <script>
+    //Localizar entradas
+    var eP = document.getElementsByTagName("p")[0];
+    var eSoma = document.getElementsByTagName("button")[0];
+    var eSubtracao = document.getElementsByTagName("button")[1];
+    var eProduto = document.getElementsByTagName("button")[2];
+    var eDivisao = document.getElementsByTagName("button")[3];
+    var eVar1 = document.getElementsByTagName("var")[0];
+    var eVar2 = document.getElementsByTagName("var")[1];
+    //Localizar saídas
+    var eSaida = document.getElementById("saida");
+    var eOperacao = document.getElementsByTagName("span")[0];
+    eSoma.addEventListener("click", function(evento){
+      calculaSoma();
+    });
+    eSubtracao.addEventListener("click", function(evento){
+      calculaSubtracao();
+    });
+    eProduto.addEventListener("click", function(evento){
+      calculaProduto();
+    });
+    eDivisao.addEventListener("click", function(evento){
+      calculaDivisao();
+    });
+
+    function calculaSoma(){
+      //Realizar operações
+      var n1 = Number(eVar1.innerHTML);
+      var n2 = Number(eVar2.innerHTML);
+      eSaida.innerHTML = n1+n2;
+      eOperacao.innerHTML = "A soma";
+    }
+    function calculaSubtracao(){
+      //Realizar operações
+      var n1 = Number(eVar1.innerHTML);
+      var n2 = Number(eVar2.innerHTML);
+      eSaida.innerHTML = n1-n2;
+      eOperacao.innerHTML = "A subtração";
+    }
+    function calculaProduto(){
+      //Realizar operações
+      var n1 = Number(eVar1.innerHTML);
+      var n2 = Number(eVar2.innerHTML);
+      eSaida.innerHTML = n1*n2;
+      eOperacao.innerHTML = "O produto";
+    }
+    function calculaDivisao(){
+      //Realizar operações
+      var n1 = Number(eVar1.innerHTML);
+      var n2 = Number(eVar2.innerHTML);
+      eSaida.innerHTML = n1/n2;
+      eOperacao.innerHTML = "A divisão";
+    }
+
+    </script>
+  </body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Exemplo JS 12</title>
+  </head>
+  <body>
+    <section>
+      <h1>Exemplo JS 12</h1>
+      <p>Os números entre <var contenteditable>1</var> e <var contenteditable>3</var> são:</p>
+      <button>Calcular</button>
+    </section>
+    <ul id="saida"></ul>
+    <script>
+    //Localizar entradas
+    var eP = document.getElementsByTagName("p")[0];
+    var eButton = document.getElementsByTagName("button")[0];
+    var eVar1 = document.getElementsByTagName("var")[0];
+    var eVar2 = document.getElementsByTagName("var")[1];
+    //Localizar saídas
+    var eUL = document.getElementById("saida");
+    eButton.addEventListener("click", function(evento){
+      console.dir(evento);
+      calculaEImprime();
+    });
+
+    function calculaEImprime(){
+      //Realizar operações
+      var n1 = Number(eVar1.innerHTML);
+      var n2 = Number(eVar2.innerHTML);
+      eUL.innerHTML = "";
+      for(var c = n1; c <= n2; c++){
+        //Imprimir resultado
+        var eLI = document.createElement("li");
+        eLI.innerHTML = c;
+        eUL.appendChild(eLI);
+      }
+    }
+
+    </script>
+  </body>
+</html>
