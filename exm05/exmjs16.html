@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Exemplo 16</title>
+  </head>
+  <body>
+    <h1>Exemplo 16</h1>
+    <form name="opcoes">
+      <label>Situacao:
+        <select name="situacao">
+          <option value="cr">Cursando</option>
+          <option value="ap">Aprovado</option>
+          <option value="rp">Reprovado</option>
+        </select>
+      </label>
+      <fieldset>
+        <label>Sistemas de Informação <input type="radio" name="curso" value="si"></label>
+        <label>Ciência da Computação <input type="radio" name="curso" value="cc"></label>
+        <label>Engenharia Computacional<input type="radio" name="curso" value="ec"></label>
+      </fieldset>
+      <input type="submit"/>
+    </form>
+    <p></p>
+    <script>
+      //Dados
+      var siglas = {
+        "cr": "cursando",
+        "ap": "aprovado",
+        "rp": "reprovado",
+        "si": "Sistemas de Informação",
+        "cc": "Ciência da Computação",
+        "ec": "Engenharia Computacional"
+      };
+      //Entradas
+      //Saidas
+      var saida = document.getElementsByTagName("p")[0];
+      //Operações
+      document.opcoes.addEventListener("submit", function(evento) {
+        evento.preventDefault();
+        var curso = document.opcoes.curso.value;
+        var situacao = document.opcoes.situacao.value;
+        saida.innerHTML = "Você está "+siglas[situacao]+" em "+siglas[curso]+"!";
+      });
+      //Resultado
+    </script>
+  </body>
+</html>

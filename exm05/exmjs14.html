@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <title>Exemplo 14</title>
+  </head>
+  <body>
+    <h1>Exemplo 14</h1>
+    <form name="somador">
+      <label>A: <input type="text" name="a" value="2"></label>
+      <label>B: <input type="text" name="b" value="2"></label>
+      <input type="submit" />
+      <input type="reset" />
+    </form>
+    <p></p>
+    <script>
+      //Entradas
+      //Saídas
+      var saida = document.getElementsByTagName("p")[0];
+      //Operações
+      document.somador.addEventListener("submit",
+      function (evento) {
+        evento.preventDefault();
+        var a = Number(document.somador.a.value);
+        var b = Number(document.somador.b.value);
+        //Resultado
+        saida.innerHTML = "A soma de A e B é: "+(a+b);
+      });
+
+    </script>
+  </body>
+</html>
